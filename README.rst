@@ -25,7 +25,7 @@ Package in java can be categorized in two form, built-in package and user-define
 
 There are many built-in packages such as java, lang, awt, javax, swing, net, io, util, sql etc. |
 
-Advantage of Java Package |
+Advantage of Java Package. |
 1) Java package is used to categorize the classes and interfaces so that they can be easily maintained. |
 
 2) Java package provides access protection. |
