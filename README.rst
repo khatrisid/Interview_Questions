@@ -16,22 +16,18 @@ Advantage of Encapsulation in Java:
       *It is a way to achieve data hiding in Java because other class will not be able to access the data through the private data members.
  
 
-.. code:: JAVA
+Java Package:
+===============================================================================
 
-    //A Java class which is a fully encapsulated class.  
-    //It has a private data member and getter and setter methods.  
-    package com.javatpoint;  
-    public class Student{  
-    //private data member  
-    private String name;  
-    //getter method for name  
-    public String getName(){  
-    return name;  
-    }  
-    //setter method for name  
-    public void setName(String name){  
-    this.name=name  
-    }  
-    }  
+A java package is a group of similar types of classes, interfaces and sub-packages. |
 
+Package in java can be categorized in two form, built-in package and user-defined package. |
 
+There are many built-in packages such as java, lang, awt, javax, swing, net, io, util, sql etc. |
+
+Advantage of Java Package |
+1) Java package is used to categorize the classes and interfaces so that they can be easily maintained. |
+
+2) Java package provides access protection. |
+
+3) Java package removes naming collision.
