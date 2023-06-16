@@ -43,3 +43,22 @@ Fail-fast iterators operate directly on the collection itself. During iteration,
 
 Fail-safe iterates operate on a cloned copy of the collection and therefore do not throw an exception if the collection is modified during iteration. Examples would include iterators returned by ConcurrentHashMap or CopyOnWriteArrayList.
 
+Java is Strictly Pass by Value!:
+===============================================================================
+
+Java creates a copy of the variable being passed in the method and then do the manipulations. Hence the change is not reflected in the main method.
+
+.. code:: JAVA
+
+      public class Main {
+          public static void main(String[] args)
+          {
+              int x = 5;
+              change(x);
+              System.out.println(x);
+          }
+          public static void change(int x) { x = 10; }
+      }
+
+      Output: 5
+
