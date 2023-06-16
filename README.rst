@@ -61,4 +61,39 @@ Java creates a copy of the variable being passed in the method and then do the m
       }
 
       Output: 5
+      
+                           How about objects or references?
+                           
+In Java, all primitives like int, char, etc are similar to C/C++, but all non-primitives (or objects of any class) are always references.
+  
+.. code:: JAVA
+  
+        // A Java program to show that we can change members using
+      // reference if we do not change the reference itself.
+      class Test {
+          int x;
+          Test(int i) { x = i; }
+          Test() { x = 0; }
+      }
+
+      class Main {
+          public static void main(String[] args)
+          {
+              // t is a reference
+              Test t = new Test(5);
+
+              // Reference is passed and a copy of reference
+              // is created in change()
+              change(t);
+
+              // New value of x is printed
+              System.out.println(t.x);
+          }
+
+          // This change() doesn't change the reference, it only
+          // changes member of object referred by reference
+          public static void change(Test t) { t.x = 10; }
+      }
+
+      Output: 10
 
