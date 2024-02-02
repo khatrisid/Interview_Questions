@@ -95,7 +95,9 @@ In Java, all primitives like int, char, etc are similar to C/C++, but all non-pr
 
           // This change() doesn't change the reference, it only
           // changes member of the object referred by reference
-          public static void change(Test t) { t.x = 10; }
+          public static void change(Test t) { 
+            t.x = 10; 
+         }
       }
 
       Output: 10
