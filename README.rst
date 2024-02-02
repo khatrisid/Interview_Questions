@@ -45,7 +45,7 @@ Fail-safe iterates operate on a cloned copy of the collection and therefore do n
 Java is Strictly Pass by Value!:
 ===============================================================================
 
-Java creates a copy of the variable being passed in the method and then do the manipulations. Hence the change is not reflected in the main method.
+Java creates a copy of the variable being passed in the method and then does the manipulations. Hence the change is not reflected in the main method.
 
 .. code:: JAVA
 
@@ -61,7 +61,8 @@ Java creates a copy of the variable being passed in the method and then do the m
 
       Output: 5
       
-                           How about objects or references?
+                           
+How about objects or references?
                            
 In Java, all primitives like int, char, etc are similar to C/C++, but all non-primitives (or objects of any class) are always references.
   
@@ -71,8 +72,12 @@ In Java, all primitives like int, char, etc are similar to C/C++, but all non-pr
       // reference if we do not change the reference itself.
       class Test {
           int x;
-          Test(int i) { x = i; }
-          Test() { x = 0; }
+          Test(int i) { 
+            x = i; 
+         }
+          Test() {
+            x = 0; 
+         }
       }
 
       class Main {
@@ -81,8 +86,7 @@ In Java, all primitives like int, char, etc are similar to C/C++, but all non-pr
               // t is a reference
               Test t = new Test(5);
 
-              // Reference is passed and a copy of reference
-              // is created in change()
+              // Reference is passed and a copy of the reference is created in change()
               change(t);
 
               // New value of x is printed
@@ -90,7 +94,7 @@ In Java, all primitives like int, char, etc are similar to C/C++, but all non-pr
           }
 
           // This change() doesn't change the reference, it only
-          // changes member of object referred by reference
+          // changes member of the object referred by reference
           public static void change(Test t) { t.x = 10; }
       }
 
@@ -100,18 +104,18 @@ In Java, all primitives like int, char, etc are similar to C/C++, but all non-pr
 Access Modifiers in Java:
 ===============================================================================
 
-The access modifiers in Java specifies the accessibility or scope of a field, method, constructor, or class. We can change the access level of fields, constructors, methods, and class by applying the access modifier on it.
+The access modifiers in Java specify the accessibility or scope of a field, method, constructor, or class. We can change the access level of fields, constructors, methods, and classes by applying the access modifier to it.
 
 There are four types of Java access modifiers:
 
 Private: The access level of a private modifier is only within the class. It cannot be accessed from outside the class.
 Default: The access level of a default modifier is only within the package. It cannot be accessed from outside the package. If you do not specify any access level, it will be the default.
-Protected: The access level of a protected modifier is within the package and outside the package through child class. If you do not make the child class, it cannot be accessed from outside the package.
-Public: The access level of a public modifier is everywhere. It can be accessed from within the class, outside the class, within the package and outside the package.
+Protected: The access level of a protected modifier is within the package and outside the package through the child class. If you do not make the child class, it cannot be accessed from outside the package.
+Public: The access level of a public modifier is everywhere. It can be accessed from within the class, outside the class, within the package, and outside the package.
 
 Java Access Modifiers with Method Overriding
 
-If you are overriding any method, overridden method (i.e. declared in subclass) must not be more restrictive.
+If you are overriding any method, the overridden method (i.e. declared in a subclass) must not be more restrictive.
 
 .. code:: JAVA
 
