@@ -56,7 +56,10 @@ Java creates a copy of the variable being passed in the method and then does the
               change(x);
               System.out.println(x);
           }
-          public static void change(int x) { x = 10; }
+          public static void change(int x) 
+          {
+              x = 10; 
+          }
       }
 
       Output: 5
@@ -101,6 +104,11 @@ In Java, all primitives like int, char, etc are similar to C/C++, but all non-pr
       }
 
       Output: 10
+
+We learned that parameter passing in Java is always Pass-by-Value. However, the context changes depending upon whether we’re dealing with Primitives or Objects:
+
+For Primitive types, parameters are pass-by-value
+For Object types, the object reference is pass-by-value
 
 
 Access Modifiers in Java:
