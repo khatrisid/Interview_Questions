@@ -191,25 +191,25 @@ Java program to demonstrate the difference between wait and sleep
 
 .. code:: JAVA
 
-class GfG{
+   class GfG{
    
-private static Object LOCK = new Object();
+   private static Object LOCK = new Object();
  
-public static void main(String[] args) 
-  throws InterruptedException {
+   public static void main(String[] args) 
+     throws InterruptedException {
   
-    Thread.sleep(1000);
+       Thread.sleep(1000);
    
-    System.out.println("Thread '" + Thread.currentThread().getName() +
-      "' is woken after sleeping for 1 second");
+       System.out.println("Thread '" + Thread.currentThread().getName() +
+         "' is woken after sleeping for 1 second");
   
-    synchronized (LOCK) 
-    {
-        LOCK.wait(1000);
+       synchronized (LOCK) 
+       {
+           LOCK.wait(1000);
        
-        System.out.println("Object '" + LOCK + "' is woken after" +
-          " waiting for 1 second");
-    }
-}
-}
+           System.out.println("Object '" + LOCK + "' is woken after" +
+             " waiting for 1 second");
+       }
+   }
+   }
 
