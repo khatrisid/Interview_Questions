@@ -187,11 +187,10 @@ It tells the calling thread to wait until another thread invokes the notify() or
 
 sleep() is most commonly used for polling, or to check for certain results, at a regular interval. wait() is generally used in multithreaded applications, in conjunction with notify() / notifyAll(), to achieve synchronization and avoid race conditions.
 
+Java program to demonstrate the difference between wait and sleep 
+
 .. code:: JAVA
 
-// Java program to demonstrate the difference 
-// between wait and sleep 
- 
 class GfG{
    
 private static Object LOCK = new Object();
@@ -213,3 +212,4 @@ public static void main(String[] args)
     }
 }
 }
+
