@@ -213,3 +213,10 @@ Java program to demonstrate the difference between wait and sleep
    }
    }
 
+
+What is the Java Classloader? List and explain the purpose of the three types of class loaders.
+===============================================================================
+
+The Java Classloader is the part of the Java runtime environment that loads classes on demand (lazy loading) into the JVM (Java Virtual Machine). Classes may be loaded from the local file system, a remote file system, or even the web.
+
+When the JVM is started, three class loaders are used: 1. Bootstrap Classloader: Loads core java API file rt.jar from the folder. 2. Extension Classloader: Loads jar files from the folder. 3. System/Application Classloader: Loads jar files from the path specified in the CLASSPATH environment variable.
