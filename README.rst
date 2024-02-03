@@ -186,3 +186,30 @@ Wait(): This method is defined in the object class. Simply pauses the thread unt
 It tells the calling thread to wait until another thread invokes the notify() or notifyAll() method for this object, The thread waits until it reobtains the ownership of the monitor and Resume Execution.
 
 sleep() is most commonly used for polling, or to check for certain results, at a regular interval. wait() is generally used in multithreaded applications, in conjunction with notify() / notifyAll(), to achieve synchronization and avoid race conditions.
+
+.. code:: JAVA
+
+// Java program to demonstrate the difference 
+// between wait and sleep 
+ 
+class GfG{
+   
+private static Object LOCK = new Object();
+ 
+public static void main(String[] args) 
+  throws InterruptedException {
+  
+    Thread.sleep(1000);
+   
+    System.out.println("Thread '" + Thread.currentThread().getName() +
+      "' is woken after sleeping for 1 second");
+  
+    synchronized (LOCK) 
+    {
+        LOCK.wait(1000);
+       
+        System.out.println("Object '" + LOCK + "' is woken after" +
+          " waiting for 1 second");
+    }
+}
+}
