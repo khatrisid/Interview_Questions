@@ -184,3 +184,5 @@ Sleep(): This Method is used to pause the execution of the current thread for a 
 Wait(): This method is defined in the object class. Simply pauses the thread until either (a) the specified number of milliseconds have elapsed or (b) it receives a desired notification from another thread (whichever is first).
                                                                                                 OR
 It tells the calling thread to wait until another thread invokes the notify() or notifyAll() method for this object, The thread waits until it reobtains the ownership of the monitor and Resume Execution.
+
+sleep() is most commonly used for polling, or to check for certain results, at a regular interval. wait() is generally used in multithreaded applications, in conjunction with notify() / notifyAll(), to achieve synchronization and avoid race conditions.
